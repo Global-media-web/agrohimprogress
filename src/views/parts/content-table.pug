@@ -1,0 +1,17 @@
+ul.content-table
+    each item, i in ['Острец ветвистый', 'Пырей ползучий', 'Свинорой пальчатый', 'Сорго алепское (гумай)']
+        li.content-table__item.harmful-object
+            .harmful-object__image
+                .cell-header Изображение
+                .cell-content
+                    img(src="/img/harmful_objects/" + (i + 1) + ".jpg", alt=item)
+            .harmful-object__name
+                .cell-header Наименование
+                .cell-content=item
+            .harmful-object__solution
+                .cell-header Решение
+                .cell-content
+                    ul.solution-list
+                        each sol in ['Жойкын', 'Жойкын дара', 'Жойкын мега', 'Рамон супер']
+                            li
+                                a.classic-link(href="")=sol

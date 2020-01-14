@@ -1,0 +1,64 @@
+extends layout/layout.pug
+include mixins/header.pug
+
+block title
+    title Страница продукта
+block style
+    link(rel="stylesheet", href="/css/simplebar.css")
+    link(rel="stylesheet", href="/css/product-page.css")
+block content
+    header.site-header
+        .container.site-header__container
+            .header-logo
+                a(href="/")
+                    img(src="/img/logotips/agrohim.png", alt="AgroHimProgress")
+            +header('/harmful.html')
+            a(href="tel:87182333929").site-menu__link 8 (7182) 333-929
+            button.mobile-menu-btn
+                span
+                span
+                span
+    .product-page
+        .container
+            .breadcrumbs
+                a.breadcrumbs__parent(href="/products.html") продукция
+                span /
+                span Жойкын, 36% в р. 3+1
+            .mobile-aside-btn
+                .mobile-title Выберите из списка
+                button.product-spec__btn#mobile-catalog-btn Жойкын, 36% в р. 3+1
+            .content
+                include parts/catalog-menu.pug
+                .product
+                    h1.page-title Жойкын, 36% в р. 3+1
+                    .product__main-desc
+                        .product__image
+                            img(src="/img/products/6.jpg", alt="product")
+                        .product__description#descScroll Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi odio est provident et, laborum ducimus deserunt velit! Aperiam necessitatibus nemo totam sed odit eaque magnam, optio placeat facilis excepturi suscipit!Corrupti perferendis consequuntur distinctio illum facilis ea iure tenetur optio odit vel modi officiis est quod, tempora nulla quo quae quibusdam. Perspiciatis quidem minus rem nihil odio vitae accusamus qui!Laborum voluptatibus perspiciatis velit optio ipsum quam minima harum sit ab totam praesentium non assumenda aspernatur inventore magni iure doloremque, maiores et officia quo animi ex. Alias labore quam autem.Repellendus aut minus dolorum minima eius, vitae soluta? Architecto veniam unde culpa minus labore officiis nemo quod eum? Distinctio quia aliquam dolorum? Incidunt at quae eius nemo, vero architecto dolore.Iusto hic soluta consequuntur tenetur, consectetur, eaque id commodi vero obcaecati quae expedita laboriosam, natus quo atque. Corrupti repellat vero porro dolores quis delectus, recusandae rem in molestias facilis ducimus.Accusamus nisi, velit, voluptatem, ullam eligendi sapiente eum incidunt itaque repellendus impedit ut modi sunt harum voluptatibus animi consequatur dicta vel? Quia qui dolor earum excepturi hic exercitationem totam soluta!Beatae deleniti dicta explicabo, labore temporibus pariatur quia quibusdam cum nihil expedita, error dolores cumque necessitatibus placeat fugit voluptatum quod, provident aliquam quas accusamus voluptatem eum minima. Consequuntur, nostrum at?Fugit culpa maxime magnam temporibus eligendi dolore nesciunt quos natus placeat labore quam, aperiam ipsa odio est alias animi id, soluta mollitia, fuga assumenda deserunt! Soluta dolores sed minima fugiat?Praesentium eligendi quibusdam facilis officiis odio veritatis magni saepe ducimus veniam eius, vitae, rem laudantium repellendus? Error asperiores molestias consequuntur architecto aliquam, blanditiis harum quis, aut sit ex quod repellendus?Non similique impedit vel sapiente doloribus perferendis nemo praesentium error nobis eligendi perspiciatis quis corrupti veniam cumque deserunt adipisci itaque sint, esse unde quam! Cupiditate ratione eum atque? Non, a.Animi voluptates nostrum adipisci eligendi minus aliquid voluptatibus asperiores sed fuga dignissimos, autem, consequuntur doloremque eius voluptate provident amet aperiam. Dolorum laborum eos quae sapiente tempora necessitatibus maiores, facere pariatur.Sequi quos perspiciatis officia rem officiis at odit voluptatibus quo voluptatem impedit laudantium, quam suscipit hic natus error ab inventore alias. Blanditiis eos eaque consequatur necessitatibus accusantium? Repellat, vel maiores!Provident harum ipsam odio nobis, reiciendis, nulla expedita optio, iste debitis nostrum non illo. Porro, odio expedita! Eos placeat assumenda cum aliquid, iusto minima itaque quis illo ut reiciendis exercitationem?Laborum eveniet, iure dolores est atque facilis. Veritatis alias, hic cum corrupti voluptates exercitationem eos vitae? Modi corrupti nobis molestias iure asperiores earum itaque deleniti, nihil non ducimus dolore aliquam!Nobis repudiandae officiis deleniti illo consequatur aliquid in commodi, sequi laboriosam distinctio, facere unde? Sint totam animi natus ut consequuntur officiis quae adipisci delectus a suscipit. Nisi sint labore provident?Veniam, sequi perspiciatis delectus molestias reprehenderit incidunt a, explicabo nostrum animi quam voluptate fugiat, placeat blanditiis ullam dolorem quos dicta! Eveniet quam odio aliquam. Vel sapiente nobis corrupti eveniet nihil.Corrupti, ratione alias. Impedit fuga quis aspernatur expedita eius numquam doloribus officia, non maxime debitis quas nesciunt provident, placeat fugiat. Cum praesentium ex magnam, voluptates rerum debitis culpa qui possimus?Quisquam et a delectus iusto in placeat, iure architecto facilis eos id, esse beatae accusantium ab debitis pariatur quas ad asperiores, vel minus labore! Id sed repellendus velit quod cum.Possimus accusamus nesciunt nam mollitia perferendis! Veritatis quod nobis repudiandae eum aut reiciendis nisi voluptatibus ratione aliquam? Commodi nihil, possimus, explicabo rerum veritatis voluptatem nam ex soluta non inventore tempora!Iusto ducimus odio ea quam voluptates, deleniti magnam recusandae! Nam eveniet, at quidem eos doloribus sapiente fugit vitae quia quod consectetur error quibusdam. Sequi soluta, expedita nesciunt laboriosam exercitationem sed.
+                    ul.product-spec
+                        -var i = 1;
+                        while i < 8
+                            li.product-spec__item
+                                button.product-spec__btn Характеристика №#{i++}
+                                .product-spec__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime delectus doloremque aliquam atque repellendus mollitia harum voluptates, eum debitis rem dicta nesciunt amet, cum veniam sint! Voluptatem quaerat dolores exercitationem?Nisi rem, molestiae mollitia neque dolore alias excepturi necessitatibus ratione culpa voluptas laboriosam adipisci architecto impedit veniam? Quam beatae veniam ratione culpa architecto ipsam enim, ducimus dignissimos, earum, cumque modi.Dignissimos sunt perferendis iure in. Ea doloremque fuga quo labore eaque. Quae dolore deleniti commodi nulla amet porro, impedit assumenda soluta nam nostrum sequi, voluptas ad incidunt? Soluta, quam sint.Amet et, facilis labore corrupti consequuntur asperiores dolorem. Assumenda, eveniet. Modi iusto quae cum ipsam obcaecati quod, cupiditate architecto quidem nisi voluptatum provident autem veritatis harum quia unde placeat omnis.
+                    button.main-btn.bounce-in#popup-form-btn Оставить заявку
+    footer.footer-site
+        .container.flex-between
+            .copy
+                .footer-logo
+                    img(src="/img/logotips/agrohim.png", alt="АгроХимПрогресс")
+                span.copy-text Все права защищены
+            .designed
+                a(href="https://globalm.kz")
+                    img(src="/img/logotips/gm.png", alt="GlobalMedia")
+    .popup-form-overlay
+        form.popup-form(action="")
+            .popup-form__title Оставьте заявку и мы свяжемся с вами
+            input.popup-form__input(type="text" name="name" placeholder="Имя")
+            input.popup-form__input(type="tel" name="phone" placeholder="Номер телефона")
+            input.popup-form__input(type="hidden" name="product" value="Жойкын, 36% в р. 3+1")
+            textarea.popup-form__input(name="text" placeholder="Сообщение")
+            button.popup-form__close-btn(type="reset")
+            button.main-btn.bounce-in Отправить
+block scripts
+    script(src="/js/product-page.js")

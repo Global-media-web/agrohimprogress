@@ -1,0 +1,9 @@
+mixin header(current_link)
+    nav.site-menu-wrapper
+        ul.site-menu
+            each item in header
+                li
+                    if(item.link===current_link)
+                        a.site-menu__link.active(href=item.link)=item.title
+                    else
+                        a.site-menu__link(href=item.link)=item.title

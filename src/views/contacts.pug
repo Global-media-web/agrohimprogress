@@ -1,0 +1,58 @@
+extends layout/layout.pug
+include mixins/header.pug
+
+block title
+    title Главная
+block style
+    link(rel="stylesheet", href="/css/contacts.css")
+block content
+    header.site-header
+        .container.site-header__container
+            .header-logo
+                a(href="/")
+                    img(src="/img/logotips/agrohim.png", alt="AgroHimProgress")
+            +header('/')
+            a(href="tel:87182333929").site-menu__link 8 (7182) 333-929
+            button.mobile-menu-btn
+                span
+                span
+                span
+    main.map-section
+      .container.h100
+        h1.def-semi-title Контакты
+        .map-wrapper
+          #map
+          .map-info
+            h3.def-text ТОО "АгроХимПрогресс"
+            address Республика Казахстан, г.Павлодар, Северная промышленная зона, строение 115/1
+            .phones
+              .phone-wrapper
+                span.phone-title Тел:
+                a.nocl(href='tel:87182730030') 8 (7182) 730 030
+                span.phone-postion
+              .phone-wrapper
+                span.phone-title Тел:
+                a.nocl(href='tel:87775458800') 8 (777) 545 88 00
+                span.phone-postion - менеджер
+              .phone-wrapper
+                span.phone-title Тел:
+                a.nocl(href='tel:87714755408') 8 (771) 475 5408
+                span.phone-postion - агроном
+              .phone-wrapper
+                span.phone-title Факс:
+                a.nocl(href='tel:87182333793') 8 (7182) 333 793
+                span.phone-postion
+            a.email.nocl(href='mailto:info@ahp.kz') Email: Info@ahp.kz
+        button.openMap.main-btn Посмотреть на карте
+    footer.footer-site
+        .container.flex-between
+            .copy
+                .footer-logo
+                    img(src="/img/logotips/agrohim.png", alt="АгроХимПрогресс")
+                span.copy-text Все права защищены
+            .designed
+                a(href="https://globalm.kz")
+                    img(src="/img/logotips/gm.png", alt="GlobalMedia")
+block scripts
+    script(src='https://maps.api.2gis.ru/2.0/loader.js?pkg=full')
+    script(src='js/contacts.js')

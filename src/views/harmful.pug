@@ -1,0 +1,52 @@
+extends layout/layout.pug
+include mixins/header.pug
+
+block title
+    title Каталог
+block style
+    link(rel="stylesheet", href="/css/harmful.css")
+block content
+    header.site-header
+        .container.site-header__container
+            .header-logo
+                a(href="/")
+                    img(src="/img/logotips/agrohim.png", alt="AgroHimProgress")
+            +header('/harmful.html')
+            a(href="tel:87182333929").site-menu__link 8 (7182) 333-929
+            button.mobile-menu-btn
+                span
+                span
+                span
+    section.harmful
+        .container
+            h1.page-title Вредные объекты
+            ul.main-list
+                each name in ['болезни', 'вредители', 'сорняки']
+                    li.main-list__item
+                        button.main-list__btn(data-target="main-tab")=name
+                        ul.sub-list
+                            li.sub-list__item
+                                button.sub-list__btn(data-target="sub-tab") Многолетние злаковые #{name}
+                                include parts/content-table
+                            li.sub-list__item
+                                button.sub-list__btn(data-target="sub-tab") Многолетние двудольные #{name}
+                                include parts/content-table
+                            li.sub-list__item
+                                button.sub-list__btn(data-target="sub-tab") Однолетние злаковые #{name}
+                                include parts/content-table
+                            li.sub-list__item
+                                button.sub-list__btn(data-target="sub-tab") Однолетние двудольные #{name}
+                                include parts/content-table
+                li
+                    button.main-list__btn.main-list__btn_up Наверх
+    footer.footer-site
+        .container.flex-between
+            .copy
+                .footer-logo
+                    img(src="/img/logotips/agrohim.png", alt="АгроХимПрогресс")
+                span.copy-text Все права защищены
+            .designed
+                a(href="https://globalm.kz")
+                    img(src="/img/logotips/gm.png", alt="GlobalMedia")
+block scripts
+    script(src="/js/harmful.js")

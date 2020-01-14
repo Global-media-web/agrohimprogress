@@ -1,0 +1,18 @@
+aside.catalog-menu
+    ul.main-list
+        each cat, i in ['Фунгициды', 'протравители', 'Гербициды', 'Инсектициды', 'Фумиганты', 'Удобрения и стимуляторы роста']
+            if i === 0    
+                li.main-list__item.active
+                    a.main-list__link(href="#")=cat
+                    ul.sub-list
+                        each name in products
+                            li.sub-list__item
+                                a.classic-link(href="/product-page.html")=name
+            else
+                li.main-list__item
+                    a.main-list__link(href="#")=cat
+                    ul.sub-list
+                        each name in products
+                            li.sub-list__item
+                                a.classic-link(href="/product-page.html")=name
+    button.mobile-close-btn

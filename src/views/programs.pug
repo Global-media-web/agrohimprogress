@@ -1,0 +1,66 @@
+extends layout/layout.pug
+include mixins/header.pug
+
+block title
+    title Главная
+block style
+    link(rel="stylesheet", href="/css/swiper.css")
+    link(rel="stylesheet", href="/css/simplebar.css")
+    link(rel="stylesheet", href="/css/plyr.css")
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+    link(rel="stylesheet", href="/css/programs.css")
+block content
+    header.site-header
+        .container.site-header__container
+            .header-logo
+                a(href="/")
+                    img(src="/img/logotips/agrohim.png", alt="AgroHimProgress")
+            +header('/programs.html')
+            a(href="tel:87182333929").site-menu__link 8 (7182) 333-929
+            button.mobile-menu-btn
+                span
+                span
+                span
+    main.programms
+      .container.grey-bg
+        h1.def-semi-title Программы
+        ul.programm-items
+          li.programm-item
+            a.item__img_wrapper(href='img/programms/ps_1.png', data-fancybox='gallery1')
+              img(src='img/programms/ps_1.png', alt='[[+pagetitle]]')
+            h3.programm-item__title Соя
+          li.programm-item
+            a.item__img_wrapper(href='img/programms/ps_2.png', data-fancybox='gallery2')
+              img(src='img/programms/ps_2.png', alt='[[+pagetitle]]')
+            h3.programm-item__title Лён
+          li.programm-item
+            a.item__img_wrapper(href='img/programms/ps_3.png', data-fancybox='gallery3')
+              img(src='img/programms/ps_3.png', alt='[[+pagetitle]]')
+            h3.programm-item__title Подсолнечник
+          li.programm-item
+            a.item__img_wrapper(href='img/programms/ps_4.png', data-fancybox='gallery4')
+              img(src='img/programms/ps_4.png', alt='[[+pagetitle]]')
+            h3.programm-item__title Горох
+          li.programm-item
+            a.item__img_wrapper(href='img/programms/ps_5.png', data-fancybox='gallery5')
+              img(src='img/programms/ps_5.png', alt='[[+pagetitle]]')
+            h3.programm-item__title Рапс
+          li.programm-item
+            a.item__img_wrapper(href='img/programms/ps_6.png', data-fancybox='gallery6')
+              img(src='img/programms/ps_6.png', alt='[[+pagetitle]]')
+            h3.programm-item__title Зерновые
+        button.main-btn.bounce-in.show-more__btn Далее
+    footer.footer-site
+        .container.flex-between
+            .copy
+                .footer-logo
+                    img(src="/img/logotips/agrohim.png", alt="АгроХимПрогресс")
+                span.copy-text Все права защищены
+            .designed
+                a(href="https://globalm.kz")
+                    img(src="/img/logotips/gm.png", alt="GlobalMedia")
+block scripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js') 
+  script(src='js/programs.js')
+      

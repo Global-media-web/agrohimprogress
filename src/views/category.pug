@@ -1,0 +1,74 @@
+extends layout/layout.pug
+include mixins/header.pug
+
+block title
+    title Главная
+block style
+    link(rel="stylesheet", href="/css/category.css")
+block content
+    header.site-header
+        .container.site-header__container
+            .header-logo
+                a(href="/")
+                    img(src="/img/logotips/agrohim.png", alt="AgroHimProgress")
+            +header('/products.html')
+            a(href="tel:87182333929").site-menu__link 8 (7182) 333-929
+            button.mobile-menu-btn
+                span
+                span
+                span
+    .category-page
+        .container
+            .breadcrumbs
+                a.breadcrumbs__parent(href="/products.html") продукция
+                span /
+                span гербициды
+            ul.catalog
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+                li.catalog__item
+                    a.catalog__card(href="")
+                        img(src="/img/products/product1.png", alt="")
+                        span Жойкын
+
+    footer.footer-site
+        .container.flex-between
+            .copy
+                .footer-logo
+                    img(src="/img/logotips/agrohim.png", alt="АгроХимПрогресс")
+                span.copy-text Все права защищены
+            .designed
+                a(href="https://globalm.kz")
+                    img(src="/img/logotips/gm.png", alt="GlobalMedia")
+block scripts
+    script(src="/js/category.js")

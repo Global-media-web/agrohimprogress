@@ -1,0 +1,89 @@
+extends layout/layout.pug
+include mixins/header.pug
+
+block title
+    title Каталог
+block style
+    link(rel="stylesheet", href="/css/simplebar.css")
+    link(rel="stylesheet", href="/css/products.css")
+block content
+    header.site-header
+        .container.site-header__container
+            .header-logo
+                a(href="/")
+                    img(src="/img/logotips/agrohim.png", alt="AgroHimProgress")
+            +header('/products.html')
+            a(href="tel:87182333929").site-menu__link 8 (7182) 333-929
+            button.mobile-menu-btn
+                span
+                span
+                span
+    section.products
+        .container
+            h1.page-title Наши средства
+            ul.products-list
+                li.products-item
+                    a(href="/product-page.html").product-label.product-label_1
+                        span Фунгициды
+                    .product-desc Химические вещества для борьбы с грибковыми болезнями растений (бордоская жидкость, серный цвет и др.), а также для протравливания семян (формалин, ТМТД, Фундазол, гранозан, меркуран) с целью освобождения их от спор паразитных грибов (типа головни для зерновых семян).
+                li.products-item
+                    a(href="/product-page.html").product-label.product-label_2
+                        span Протравители
+                    .product-desc Химические вещества для борьбы с грибковыми болезнями растений (бордоская жидкость, серный цвет и др.), а также для протравливания семян (формалин, ТМТД, Фундазол, гранозан, меркуран) с целью освобождения их от спор паразитных грибов (типа головни для зерновых семян).
+                li.products-item
+                    a(href="/product-page.html").product-label.product-label_3
+                        span Гербициды
+                    .product-desc Химические вещества для борьбы с грибковыми болезнями растений (бордоская жидкость, серный цвет и др.), а также для протравливания семян (формалин, ТМТД, Фундазол, гранозан, меркуран) с целью освобождения их от спор паразитных грибов (типа головни для зерновых семян).
+                li.products-item
+                    a(href="/product-page.html").product-label.product-label_4
+                        span Инсектициды
+                    .product-desc Химические вещества для борьбы с грибковыми болезнями растений (бордоская жидкость, серный цвет и др.), а также для протравливания семян (формалин, ТМТД, Фундазол, гранозан, меркуран) с целью освобождения их от спор паразитных грибов (типа головни для зерновых семян).
+                li.products-item
+                    a(href="/product-page.html").product-label.product-label_5
+                        span Фумиганты
+                    .product-desc Химические вещества для борьбы с грибковыми болезнями растений (бордоская жидкость, серный цвет и др.), а также для протравливания семян (формалин, ТМТД, Фундазол, гранозан, меркуран) с целью освобождения их от спор паразитных грибов (типа головни для зерновых семян).
+                li.products-item
+                    a(href="/product-page.html").product-label.product-label_6
+                        span Удобрения и стимуляторы роста
+                    .product-desc Химические вещества для борьбы с грибковыми болезнями растений (бордоская жидкость, серный цвет и др.), а также для протравливания семян (формалин, ТМТД, Фундазол, гранозан, меркуран) с целью освобождения их от спор паразитных грибов (типа головни для зерновых семян).
+            div
+                h3.block-title.centered-text Подобрать средство
+                .filter
+                    .filter__control
+                        label.control
+                            .filter__title Выберите культуру
+                            select.control__select#culture
+                                option Ячмень
+                                option Пшеница
+                                option Рожь
+                        label.control
+                            .filter__title Действующее вещество
+                            select.control__select#activeSub
+                                option Глифосат 360 г/л
+                                option Эскадрон 280 г/л
+                                option Дикамбат 300 г/л
+                        button.main-btn.bounce-in#filterSubmit Подобрать
+                    .filter__output
+                        .filter__title Подходящая продукция
+                        ul.filter__list#filterOut
+                            each item in ["Жойкын Мега, 60% В.Р.", "Эскадрон 70, К.Э.", "Дикамбат 480, В.Р.", "Рысь супер, 10% К.Э.", "Рысь ультра, Э.М.В."]
+                                li
+                                    a.classic-link(href="")=item
+                            each item in ["Жойкын Мега, 60% В.Р.", "Эскадрон 70, К.Э.", "Дикамбат 480, В.Р.", "Рысь супер, 10% К.Э.", "Рысь ультра, Э.М.В."]
+                                li
+                                    a.classic-link(href="")=item
+                            each item in ["Жойкын Мега, 60% В.Р.", "Эскадрон 70, К.Э.", "Дикамбат 480, В.Р.", "Рысь супер, 10% К.Э.", "Рысь ультра, Э.М.В."]
+                                li
+                                    a.classic-link(href="")=item
+
+    footer.footer-site
+        .container.flex-between
+            .copy
+                .footer-logo
+                    img(src="/img/logotips/agrohim.png", alt="АгроХимПрогресс")
+                span.copy-text Все права защищены
+            .designed
+                a(href="https://globalm.kz")
+                    img(src="/img/logotips/gm.png", alt="GlobalMedia")
+block scripts
+    script(src="/js/products.js")

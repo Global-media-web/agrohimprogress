@@ -1,0 +1,244 @@
+@import 'parts/reboot.css';
+@import 'parts/fonts.css';
+@import 'parts/hovers.postcss';
+@import 'parts/main.postcss';
+
+
+.grey-bg{
+	background-color: #fbfbfd;
+}
+
+.container{
+	width: 73.2%;
+    margin:auto;
+}
+.programms {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	z-index: 99;
+}
+
+.programms::before {
+    display: block;
+    content: "";
+    width: 179px;
+    height: 154px;
+    position: absolute;
+    background: url("../img/icons/buterfly.png")no-repeat;
+    bottom: 10%;
+    left: 145px;
+	/* z-index: 90; */
+}
+
+
+
+
+.programms::after {
+    display: block;
+    content: "";
+    width: 179px;
+    height: 154px;
+    position: absolute;
+    background: url("../img/icons/buterfly.png")no-repeat;
+    top: 50%;
+    right: 45px;
+	z-index: 90;
+
+}
+
+.programm-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	transition: all .5s;
+}
+
+.programm-items::before {
+    display: block;
+    content: "";
+    width: 179px;
+    height: 154px;
+    position: absolute;
+    background: url("../img/icons/buterfly.png")no-repeat;
+    top: -70px;
+    left: -145px;
+	z-index: 90;
+
+}
+
+.programm-items::after {
+    display: block;
+    content: "";
+    width: 179px;
+    height: 154px;
+    position: absolute;
+    background: url(../img/icons/buterfly.png) no-repeat;
+    top: -115px;
+    right: 100px;
+    z-index: 1;
+	z-index: 90;
+
+}
+
+
+.programm-item {
+    width: calc(100% / 3 - 6px);
+    height: 310px;
+    margin-right: 6px;
+    margin-bottom: 45px;
+    cursor: pointer;
+    box-shadow: 6px 5px 35px rgba(0, 0, 0, 0.09);
+    z-index: 99;
+}
+
+.item__img_wrapper::before{
+	display: none;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, .3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.5s;
+}
+
+.item__img_wrapper::after{
+	display: none;
+	content: "";
+	width: 60px;
+	height: 60px;
+	background: url('../img/icons/search-icon.svg')no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.5s;
+}
+
+.programm-item:hover .item__img_wrapper::before, .programm-item:hover .item__img_wrapper::after{display: block;}
+
+.programm-item:hover .programm-item__title{color: rgba(179, 205, 47, 1);}
+
+.programm-item:nth-child(3n){margin-right: 0;}
+
+
+.programm-item .item__img_wrapper{
+	width: 100%;
+	height: 264px;
+	display: block;
+    position: relative;
+}
+
+.programm-item .item__img_wrapper img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+.programm-item__title{
+	width: 100%;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+	background-color: #343434;
+	padding:15px;
+	text-align: center;
+	color: #ffffff;
+	font-family: "Montserrat";
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.def-semi-title{
+    color: #585858;
+    font-family: "Montserrat";
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+}
+.show-more__btn {
+	display: none;
+	margin: 50px 0;
+}
+@media (max-width: 1366px) {
+	.map-info .phones::before {left: -18%; }
+	.platext {left: 67%;}
+}
+@media (max-width: 980px) {
+	.map-wrapper {height: calc(80% - 100px);}
+	.map-info {width: 50%;}
+	.map-info address::before {left: -22%; }
+	.map-info .phones::before {left: -22%; }
+	.map-info .email::before {left: -22%; }
+	.programm-item {width: calc(100% / 2 - 6px);}
+	.programm-item:nth-child(2n){margin-right: 0;}
+	.single-news {width: calc(100% / 2 - 10px); }
+	.single-news::nth-child(2n){margin-right: 0;}
+	.reviews-slider .swiper-slide.swiper-slide-active {transform: scale(1);}
+	.about-block {flex-direction: column; }
+	.about-text {width: 100%;}
+	.about-block__slider {width: 100%; margin-top: 50px; }
+	.about-block__slider {display: flex; flex-direction: column; }
+	.grain, .ira-called-it-grain{display: none;}
+}
+@media (max-width: 480px) {
+	.openMap{display: block;}
+	.map-info {width: 100%; }
+	.map-wrapper {height: calc(100% - 100px); }
+	.map-info, .map-info a, .map-info address {font-size: 12px;}
+	.def-semi-title {font-size: 28px;}
+	.map-section {min-height: calc(100% - 101px - 142px);padding: 25px 0;}
+	.map-wrapper {margin-top: 25px; height: calc(100% - 130px);}
+	.programm-item {width: calc(100% - 6px);margin-right: 0;}
+	.programms::before,.programms::after,.programm-items::before,.programm-items::after{display: none;}
+	.show-more__btn{display: flex;}
+	.programm-items {max-height: calc(340px * 3); overflow: hidden; }
+	.single-news {width:100%;margin-right: 0;}
+	.news-wrapper .header_news-title{order: -1; } 
+	.news-wrapper .pagination.custom-pag{order: 1; margin-top: 0; margin-left: 0; margin-bottom: 15px; }
+	.news-wrapper .def-semi-title {margin-bottom: 25px;}
+	.news-wrapper .news-list{order: 2; }
+	.page-num a{font-size: 10px; }
+	.page-num.active a{font-size: 18px; } 
+	.pagination.custom-pag {width: 115px;}
+	.news-wrapper::before,.news-wrapper::after,.news-list::before,.news-list::after{display: none;}
+	.news-img__wrapper img{object-fit: cover;}
+	.reviews::before,.reviews::after, .ira-called-it-grain, .twosides__butterfly::before, .twosides__butterfly::after{display: none;}
+	.simplebar-track {left: auto; right: 0; }
+	.about-text {padding-left: 0; padding-right: 20px; }
+	.simplebar-scrollbar {left: auto; }
+	.def-semi-title {margin-bottom: 10px;}
+	.reverse-controls .def-slider-controls {width: 140px;}
+	.about section{margin-bottom: 65px; }
+	.about-block-controls {width: 140px; }
+	.container {
+        width: 320px;
+    }
+}
+@media (max-width: 375px) {
+	.map-section {min-height: calc(100% - 101px - 142px + 15%); }
+	.map-wrapper {margin-top: 25px; height: calc(100% - 110px); }
+}
+@media (max-width: 330px) {
+	.map-info, .map-info a, .map-info address {font-size: 10px;}
+	.map-section {height: calc(100% - 101px - 142px + 15%);}
+	.map-info {padding: 20px 20px 20px 30px;}
+	.map-info address::before {width: 33px; height: 40px; background-size: cover;  left: -18%;}
+	.map-info .phones::before {width: 30px; height: 40px; background-size: cover; left: -18%; top: -12px; }
+	.map-wrapper {height: calc(100% - 130px); }
+	.map-section {height: calc(100% - 101px - 142px + 25%); }
+}
