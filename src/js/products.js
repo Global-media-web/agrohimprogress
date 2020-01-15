@@ -1,8 +1,10 @@
 import {mobileMenuInit} from './parts/mobilemenu';
 import SimpleBar from 'simplebar';
+import {seoTextInit} from './parts/seotext';
 
 document.addEventListener('DOMContentLoaded', () => {
     mobileMenuInit();
+    seoTextInit();
     new SimpleBar(document.getElementById('filterOut'));
 
     const cultureSelect = document.querySelector('#culture');

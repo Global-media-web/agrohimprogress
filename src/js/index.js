@@ -1,5 +1,6 @@
 import {mobileMenuInit} from './parts/mobilemenu';
 import {formOverlayInit} from './parts/popupform';
+import {seoTextInit} from './parts/seotext';
 import SimpleBar from 'simplebar';
 import Swiper from 'swiper';
 import Plyr from 'plyr';
@@ -7,6 +8,7 @@ import IMask from 'imask';
 
 document.addEventListener('DOMContentLoaded', () => {
   mobileMenuInit();
+  seoTextInit();
   const form = formOverlayInit();
   const mainSlider = new Swiper('.main-slider', {loop: true});
   const productSlider = new Swiper('.products-slider', {

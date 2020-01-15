@@ -1,9 +1,11 @@
 import { mobileMenuInit } from './parts/mobilemenu';
 import SimpleBar from 'simplebar';
 import Swiper from 'swiper';
+import {seoTextInit} from './parts/seotext';
 
 document.addEventListener("DOMContentLoaded", function (event) {
     mobileMenuInit();
+    seoTextInit();
     new SimpleBar(document.getElementById('aboutScroll'));
     const aboutSlider = new Swiper('.about-block__slider', {
         loop: true,

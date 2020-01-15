@@ -11,6 +11,7 @@
 html,body {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-text-color);
+    height: 100%;
 }
 body {
     display: flex;
@@ -39,7 +40,7 @@ body {
     }
 }
 .site-header {
-    width: 100vw;
+    width: 100%;
 }
 .page-title {
     font-size: 36px;
@@ -272,6 +273,7 @@ body {
 .footer-site {
   background-color: #343434;
   padding: 25px 0;
+  margin-top: auto;
 }
 .footer-logo {
     display: inline-block;
@@ -433,5 +435,20 @@ body {
     }
     @media (--tablet) {
         display: none;
+    }
+}
+.seo-btn {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.seo-txt {
+    height: 0;
+    overflow: hidden;
+    &.active {
+        overflow: visible;
+        height: auto;
     }
 }

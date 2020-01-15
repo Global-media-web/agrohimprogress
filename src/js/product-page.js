@@ -1,10 +1,12 @@
 import {mobileMenuInit} from './parts/mobilemenu';
 import {formOverlayInit} from './parts/popupform';
+import {seoTextInit} from './parts/seotext';
 import SimpleBar from 'simplebar';
 import IMask from 'imask';
 
 document.addEventListener('DOMContentLoaded', () => {
   mobileMenuInit();
+  seoTextInit();
   const form = formOverlayInit();
   new SimpleBar(document.getElementById('descScroll'));
   let activeCategory = document.querySelector('.main-list__item.active');

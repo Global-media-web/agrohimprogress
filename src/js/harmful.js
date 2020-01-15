@@ -1,7 +1,9 @@
 import {mobileMenuInit} from './parts/mobilemenu';
+import {seoTextInit} from './parts/seotext';
 
 document.addEventListener('DOMContentLoaded', () => {
     mobileMenuInit();
+    seoTextInit();
     let activeCategory, activeSubCategory;
     document.querySelector('.main-list').addEventListener('click', e => {
         if (e.target.dataset.target === 'main-tab') {

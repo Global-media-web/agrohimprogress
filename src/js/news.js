@@ -1,7 +1,9 @@
 import { mobileMenuInit } from './parts/mobilemenu';
+import {seoTextInit} from './parts/seotext';
 
 document.addEventListener("DOMContentLoaded", function (event) {
     mobileMenuInit();
+    seoTextInit();
     const show_more_btn = document.querySelector('.news-list');
     if (show_more_btn) {
         document.querySelectorAll('.news-desc').forEach(el => {
