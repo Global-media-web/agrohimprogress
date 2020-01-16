@@ -1,6 +1,7 @@
 import { mobileMenuInit } from './parts/mobilemenu';
 import SimpleBar from 'simplebar';
 import Swiper from 'swiper';
+import LazyLoad from 'vanilla-lazyload';
 import {seoTextInit} from './parts/seotext';
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -113,6 +114,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 spaceBetween: 0
             }
         }
+    });
+    new LazyLoad({
+        elements_selector: ".lazy"
     });
     $(document).on('click', '.reviews_stars_widget_item', function (e) {
         $('.reviews_stars_widget_item').removeClass('_active');

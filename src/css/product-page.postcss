@@ -1,5 +1,6 @@
 @import 'parts/reboot.css';
 @import 'parts/fonts.css';
+@import 'parts/simplebar.css';
 @import 'parts/hovers.postcss';
 @import 'parts/main.postcss';
 
@@ -106,7 +107,7 @@
         }
         @media (--tablet) {
             order: -1;
-            height: 375px;
+            max-height: 375px;
             font-size: 12px;
         }
     }
@@ -175,6 +176,7 @@
         &__desc {
             max-height: 0;
             overflow: hidden;
+            overflow-x: auto;
             transition: all .5s;
             font-size: 14px;
         }
