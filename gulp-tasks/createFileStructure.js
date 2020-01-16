@@ -9,8 +9,8 @@ gulp.task('createFileStructure', (done) => {
     mkDirIfNotExist('src/js');
     mkDirIfNotExist('src/views');
     mkDirIfNotExist('src/fonts');
-    fs.writeFileSync('src/views/content.json', '{}');
-    fs.writeFileSync('src/js/index.js', '');
+    fs.writeFileSync('src/views/content.json', '{}', {flag: 'wx'});
+    fs.writeFileSync('src/js/index.js', '', {flag: 'wx'});
     done();
 })
 
