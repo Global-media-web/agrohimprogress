@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const specArea = document.querySelector('.product-spec');
   if(specArea) {
     specArea.addEventListener('click', e => {
-      if (e.target.classList.contains('product-spec__btn') && !e.target.classList.contains('active')) {
+      if (e.target.classList.contains('product-spec__btn')) {
           const prevBtn = document.querySelector('.product-spec__btn.active');
           const targetBlock = e.target.nextElementSibling;
           e.target.classList.add('active');
