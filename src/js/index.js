@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pagination: {
       el: '.products-slider-pagination',
       type: 'fraction',
-      formatFractionCurrent: number => number > 9 ? number : `0${number}`,
+      formatFractionCurrent: number => number > 9 ? number : `O${number}`,
       currentClass: 'products-slider-pagination__current',
       totalClass: 'products-slider-pagination__total'
     },
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.products-slider-prev'
     }
   });
-  new SimpleBar(document.getElementById('aboutScroll'));
+  const simpleBar = new SimpleBar(document.getElementById('aboutScroll'));
   IMask(document.querySelector('input[type=tel]'), {mask: '+{7} (000) 000-00-00'});
 
   const initPlayer = () => {
@@ -38,8 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if(document.documentElement.clientWidth > 768) {
     $('#pagepiling').pagepiling({
-      normalScrollElements: '#aboutScroll',
-      normalScrollElementTouchThreshold: 7,
+      normalScrollElements: '.simplebar-content',
       onLeave: (index, next) => {
         if(next === 2) {
           new LazyLoad({
