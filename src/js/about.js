@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             el: '.about-block-pagination',
             type: 'fraction',
             formatFractionCurrent: function formatFractionCurrent(number) {
-                return number > 9 ? number : "0".concat(number);
+                return number > 9 ? number : "O".concat(number);
             },
             currentClass: 'def-slider-pagination__current',
             totalClass: 'def-slider-pagination__total'
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             el: '.sert-block-pagination',
             type: 'fraction',
             formatFractionCurrent: function formatFractionCurrent(number) {
-                return number > 9 ? number : "0".concat(number);
+                return number > 9 ? number : "O".concat(number);
             },
             currentClass: 'def-slider-pagination__current',
             totalClass: 'def-slider-pagination__total'
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             el: '.clients-block-pagination',
             type: 'fraction',
             formatFractionCurrent: function formatFractionCurrent(number) {
-                return number > 9 ? number : "0".concat(number);
+                return number > 9 ? number : "O".concat(number);
             },
             currentClass: 'def-slider-pagination__current',
             totalClass: 'def-slider-pagination__total'
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             el: '.reviews-block-pagination',
             type: 'fraction',
             formatFractionCurrent: function formatFractionCurrent(number) {
-                return number > 9 ? number : "0".concat(number);
+                return number > 9 ? number : "O".concat(number);
             },
             currentClass: 'def-slider-pagination__current',
             totalClass: 'def-slider-pagination__total'
