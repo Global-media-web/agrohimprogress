@@ -11,6 +11,9 @@ html, body {
     overflow: auto;
   }
 }
+.section {
+  flex-shrink: 0;
+}
 .site-header {
     width: 100vw;
 }
@@ -269,7 +272,8 @@ html, body {
     align-items: center;
     justify-content: center;
     @media (--tablet) {
-      align-items: flex-start;
+      /* align-items: flex-start; */
+      display: block;
     }
   }
   @media (--tablet) {
@@ -402,7 +406,7 @@ html, body {
   @media (--tablet) {
     width: 100%;
     margin-bottom: 20px;
-    height: 150px;
+    max-height: 150px;
   }
   @media (--mobile) {
     font-size: 10px;
